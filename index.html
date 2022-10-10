@@ -1,0 +1,706 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Python Progtamming - Silicon Startup</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ntnuerc.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <script src="https://daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+		
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <script src="js/ntnu.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+        <div class="slides">
+            
+<section id="start" data-state="start">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Python Progtamming - Silicon Startup</h1>
+
+<p>
+      Jacky Baltes<br>
+      National Taiwan Normal University<br>
+      Taipei, Taiwan<br>
+      <a href="mailto:jacky.baltes@ntnu.edu.tw">jacky.baltes@ntnu.edu.tw</a><br>
+</p>
+
+<class 'datetime.date'>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-05bd589b-f127-475c-a124-fcc120308ed8" ><span id="id-05bd589b-f127-475c-a124-fcc120308ed8"><img id="img-id-05bd589b-f127-475c-a124-fcc120308ed8"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-cf8b9d4c-a1ca-4c80-ad8b-caff4ec5e458" ><span id="id-cf8b9d4c-a1ca-4c80-ad8b-caff4ec5e458"><img id="img-id-cf8b9d4c-a1ca-4c80-ad8b-caff4ec5e458" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00003_frag_00001" data-state="slide_00003_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="startup-company-woes">
+<h1 class="title">Startup Company Woes</h1>
+<div class="jb-text docutils container">
+<ul class="simple">
+<li>You are a founder for your startup Buttbook in Silicon Valley</li>
+<li>Round A funding has dried up, so you need to pitch to your investors</li>
+<li>You have a list of profits over the last period, and you need to find the
+most profitable subperiod for your startup</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-6277878f-c394-43c4-bbce-b235302dcc33" ><span id="id-6277878f-c394-43c4-bbce-b235302dcc33"><img id="img-id-6277878f-c394-43c4-bbce-b235302dcc33"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-9fd27e85-2af4-4016-8044-5a7de036a660" ><span id="id-9fd27e85-2af4-4016-8044-5a7de036a660"><img id="img-id-9fd27e85-2af4-4016-8044-5a7de036a660" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00004_frag_00001" data-state="slide_00004_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">random</span>
+
+profits <span style="color: #666666">=</span> [ random<span style="color: #666666">.</span>randint(<span style="color: #666666">-100</span>,<span style="color: #666666">100</span>) <span style="color: #008000; font-weight: bold">for</span> x <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">20</span>) ]
+
+<span style="color: #008000">print</span>( <span style="color: #BA2121">f&#39;profits=</span><span style="color: #BB6688; font-weight: bold">{</span>profits<span style="color: #BB6688; font-weight: bold">}</span><span style="color: #BA2121">&#39;</span>)
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+<div class="jb-print jb-render">
+<div class="jb-output jb-render code" style="text-align:center">
+<div class="jb-stdout code" style="display:inline-block; width:90%">
+<pre >
+profits=[-29, -37, 59, 86, 47, -97, 68, -83, -43, -88, 95, -67, 96, -59, -62, 39, -92, -20, 22, -75]
+</pre>
+</div>
+</div>
+
+</div><!-- end of jb-print jb-render -->
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-36c620b4-1f7c-41ba-a527-e9011d07fdef" ><span id="id-36c620b4-1f7c-41ba-a527-e9011d07fdef"><img id="img-id-36c620b4-1f7c-41ba-a527-e9011d07fdef"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-9d64f365-9c65-482f-aa43-3f3d3d7a2efe" ><span id="id-9d64f365-9c65-482f-aa43-3f3d3d7a2efe"><img id="img-id-9d64f365-9c65-482f-aa43-3f3d3d7a2efe" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00005_frag_00001" data-state="slide_00005_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">find_max_subsequence</span>(lst):
+  <span style="color: #408080; font-style: italic">#print( f&#39;fms {lst}&#39; ) </span>
+  <span style="color: #008000">max</span> <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">None</span>
+  maxRange <span style="color: #666666">=</span> (<span style="color: #008000; font-weight: bold">None</span>,<span style="color: #008000; font-weight: bold">None</span>)
+  <span style="color: #008000; font-weight: bold">for</span> start <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>( <span style="color: #008000">len</span>(lst ) ):
+    <span style="color: #008000; font-weight: bold">for</span> end <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>( start <span style="color: #666666">+</span> <span style="color: #666666">1</span>, <span style="color: #008000">len</span>(lst) <span style="color: #666666">+</span> <span style="color: #666666">1</span> ):
+      psum <span style="color: #666666">=</span> <span style="color: #008000">sum</span>( lst[start:end] )
+      <span style="color: #408080; font-style: italic">#print( f&#39;sum {psum} max {max}, range {maxRange}&#39;)</span>
+      <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">max</span> <span style="color: #AA22FF; font-weight: bold">is</span> <span style="color: #008000; font-weight: bold">None</span> <span style="color: #AA22FF; font-weight: bold">or</span> psum <span style="color: #666666">&gt;</span> <span style="color: #008000">max</span>:
+        <span style="color: #008000">max</span> <span style="color: #666666">=</span> psum
+        maxRange <span style="color: #666666">=</span> (start, end)
+  <span style="color: #008000; font-weight: bold">return</span> maxRange, <span style="color: #008000">max</span>
+
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">5</span>):
+  lst <span style="color: #666666">=</span> [ random<span style="color: #666666">.</span>randint(<span style="color: #666666">-100</span>,<span style="color: #666666">100</span>) <span style="color: #008000; font-weight: bold">for</span> x <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">7</span>) ]
+  ret <span style="color: #666666">=</span> find_max_subsequence( lst )
+  <span style="color: #008000">print</span>( <span style="color: #BA2121">f&#39;</span><span style="color: #BB6688; font-weight: bold">{</span>lst<span style="color: #BB6688; font-weight: bold">}</span><span style="color: #BA2121"> =&gt; </span><span style="color: #BB6688; font-weight: bold">{</span>ret<span style="color: #BB6688; font-weight: bold">}</span><span style="color: #BA2121">&#39;</span>)
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+<div class="jb-print jb-render">
+<div class="jb-output jb-render code" style="text-align:center">
+<div class="jb-stdout code" style="display:inline-block; width:90%">
+<pre >
+[-100, -33, 61, -11, 80, 16, 76] => ((2, 7), 222)
+[81, 3, -2, 80, 36, 12, 78] => ((0, 7), 288)
+[-61, -45, 0, -71, -94, 2, -77] => ((5, 6), 2)
+[41, 32, -74, -49, -32, 2, 6] => ((0, 2), 73)
+[-99, -4, -41, -67, 5, -87, 17] => ((6, 7), 17)
+</pre>
+</div>
+</div>
+
+</div><!-- end of jb-print jb-render -->
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-11a26d61-e275-4426-b4f8-13089f0e004e" ><span id="id-11a26d61-e275-4426-b4f8-13089f0e004e"><img id="img-id-11a26d61-e275-4426-b4f8-13089f0e004e"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-34cb3bad-543c-4740-9cca-ca6a2fcadbf1" ><span id="id-34cb3bad-543c-4740-9cca-ca6a2fcadbf1"><img id="img-id-34cb3bad-543c-4740-9cca-ca6a2fcadbf1" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00006_frag_00001" data-state="slide_00006_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">timeit</span>
+
+lst <span style="color: #666666">=</span> [ random<span style="color: #666666">.</span>randint(<span style="color: #666666">-100</span>,<span style="color: #666666">100</span>) <span style="color: #008000; font-weight: bold">for</span> x <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1000</span>) ]
+
+
+<span style="color: #666666">%</span>timeit find_max_subsequence( lst )
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+<div class="jb-print jb-render">
+<div class="jb-output jb-render code" style="text-align:center">
+<div class="jb-stdout code" style="display:inline-block; width:90%">
+<pre >
+2.76 s +- 518 ms per loop (mean +- std. dev. of 7 runs, 1 loop each)
+</pre>
+</div>
+</div>
+
+</div><!-- end of jb-print jb-render -->
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-a2c4def4-2dec-4ce4-b77b-8cb36411f3c1" ><span id="id-a2c4def4-2dec-4ce4-b77b-8cb36411f3c1"><img id="img-id-a2c4def4-2dec-4ce4-b77b-8cb36411f3c1"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-81c5a77c-1b7f-48f2-a70a-6d7937e77722" ><span id="id-81c5a77c-1b7f-48f2-a70a-6d7937e77722"><img id="img-id-81c5a77c-1b7f-48f2-a70a-6d7937e77722" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00007_frag_00001" data-state="slide_00007_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="prefix-sums">
+<h1 class="title">Prefix Sums</h1>
+<div class="jb-text docutils container">
+<ul class="simple">
+<li>Algorithm currently has O(n**2) time complexity</li>
+<li>Can be reduced to a linear complexity O(n) through the use of prefix sums</li>
+<li>Implement a version using prefix sums</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-1752f363-521c-4e85-a715-a0d83bd943d0" ><span id="id-1752f363-521c-4e85-a715-a0d83bd943d0"><img id="img-id-1752f363-521c-4e85-a715-a0d83bd943d0"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-2990c098-b1e1-446f-9636-73b39df509c5" ><span id="id-2990c098-b1e1-446f-9636-73b39df509c5"><img id="img-id-2990c098-b1e1-446f-9636-73b39df509c5" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00008_frag_00001" data-state="slide_00008_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="prefix-sums">
+<h1 class="title">Prefix Sums</h1>
+<div class="jb-text docutils container">
+<ul class="simple">
+<li>Initialize <strong>start</strong> to 0</li>
+<li>Keep track of <strong>sum</strong> from <strong>start</strong> to current</li>
+<li>Remember maximum of <strong>sum</strong></li>
+<li>If <strong>sum</strong> is less than 0, then reset <strong>sum</strong> to 0 and set <strong>start</strong> to next element</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-213479a4-2537-4b55-a57e-c65747849606" ><span id="id-213479a4-2537-4b55-a57e-c65747849606"><img id="img-id-213479a4-2537-4b55-a57e-c65747849606"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-568d9e5a-fb25-4a9d-b803-c6effdc84c3c" ><span id="id-568d9e5a-fb25-4a9d-b803-c6effdc84c3c"><img id="img-id-568d9e5a-fb25-4a9d-b803-c6effdc84c3c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00009_frag_00001" data-state="slide_00009_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<h1>Implementation in Typescript</h1>
+
+<code>
+<pre style="background:#202020">
+let numbers : Array<number> = [];
+
+for( let i = 0; i < 10; i++ ) {
+    let r = Math.floor( Math.random() * 200 - 100 ); 
+    //console.log( `random ${r}`);
+    numbers.push( r )
+}
+</pre>
+</code>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-c48de107-77f3-4fa6-ab93-c864b6bd2d8d" ><span id="id-c48de107-77f3-4fa6-ab93-c864b6bd2d8d"><img id="img-id-c48de107-77f3-4fa6-ab93-c864b6bd2d8d"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-e0cf1673-af5c-4e9d-9960-2e21892a4e03" ><span id="id-e0cf1673-af5c-4e9d-9960-2e21892a4e03"><img id="img-id-e0cf1673-af5c-4e9d-9960-2e21892a4e03" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00010_frag_00001" data-state="slide_00010_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<h1>Implementation in Typescript</h1>
+
+<code>
+<pre style="background:#202020">
+function find_max_subsequence( numbers : number[] ) : number[] {
+    let msum = 0;
+    let mmax = -Infinity;
+    let start = 0;
+    let mstart = -1;
+    let mend = -1;
+
+    for( let i = 0; i < numbers.length; i++ ) {
+        let n = numbers[i]
+        msum = msum + n;
+        if ( msum > mmax ) {
+            mmax = msum;
+            mstart = start;
+            mend = i;
+        }
+        if ( msum < 0 ) {
+            msum = 0;
+            start = i+1;
+        }
+    }
+    return [ mmax, mstart, mend + 1];
+}
+</pre>
+</code>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-6a5c47e5-5b6d-46ef-84e1-d4a2d9e75201" ><span id="id-6a5c47e5-5b6d-46ef-84e1-d4a2d9e75201"><img id="img-id-6a5c47e5-5b6d-46ef-84e1-d4a2d9e75201"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-c2c98ddf-e526-466b-8081-4104c6cb84fb" ><span id="id-c2c98ddf-e526-466b-8081-4104c6cb84fb"><img id="img-id-c2c98ddf-e526-466b-8081-4104c6cb84fb" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00011_frag_00001" data-state="slide_00011_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<h1>Implementation in Typescript</h1>
+
+<code>
+<pre style="background:#202020">
+let m = find_max_subsequence( numbers );
+console.log( `numbers: [ ${numbers} ] => ${m}`);
+
+numbers = [-100, -23, -55];
+m = find_max_subsequence( numbers );
+console.log( `numbers: [ ${numbers} ] => ${m}`);
+
+numbers = [ 1, 2, 3, 4, 5 ];
+m = find_max_subsequence( numbers );
+console.log( `numbers: [ ${numbers} ] => ${m}`);
+</pre>
+</code>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-e102e169-1ac7-442f-bbfa-fda506f1824a" ><span id="id-e102e169-1ac7-442f-bbfa-fda506f1824a"><img id="img-id-e102e169-1ac7-442f-bbfa-fda506f1824a"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-30939c6a-7677-4755-a719-4ac7cd05fb8d" ><span id="id-30939c6a-7677-4755-a719-4ac7cd05fb8d"><img id="img-id-30939c6a-7677-4755-a719-4ac7cd05fb8d" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+        </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+                    // tex2jax: {
+                    //     inlineMath: [['$', '$'], ['\(', '\)']],
+                    //     displayMath: [['$$', '$$'], ['\[', '\]']],
+                    //     processEscapes: true,
+                    //     processEnvironments: true,
+                    //     skipTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'],
+                    //     displayAlign: 'center',
+                    // }                
+                },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+        </script>
+
+        <script>
+            <!-- Assets -->
+var assets = {
+"robbi" : new JBImage( "robbi", "12677", "162", "138", null, null, "assets/images/robbi", "png" ),
+"logo" : new JBImage( "logo", "12033", "0", "0", null, null, "assets/images/logo", "png" ),
+"fira-logo-1" : new JBImage( "fira-logo-1", "93836", "0", "0", null, null, "assets/images/FIRA-logo-1", "png" ),
+"pairLogo" : new JBImage( "pairLogo", "63051", "0", "0", null, null, "assets/images/pairLogo", "png" ) 
+};
+var assetInstances = {
+    "id-cf8b9d4c-a1ca-4c80-ad8b-caff4ec5e458": assets["robbi"],
+    "id-9fd27e85-2af4-4016-8044-5a7de036a660": assets["robbi"],
+    "id-9d64f365-9c65-482f-aa43-3f3d3d7a2efe": assets["robbi"],
+    "id-34cb3bad-543c-4740-9cca-ca6a2fcadbf1": assets["robbi"],
+    "id-81c5a77c-1b7f-48f2-a70a-6d7937e77722": assets["robbi"],
+    "id-2990c098-b1e1-446f-9636-73b39df509c5": assets["robbi"],
+    "id-568d9e5a-fb25-4a9d-b803-c6effdc84c3c": assets["robbi"],
+    "id-e0cf1673-af5c-4e9d-9960-2e21892a4e03": assets["robbi"],
+    "id-c2c98ddf-e526-466b-8081-4104c6cb84fb": assets["robbi"],
+    "id-30939c6a-7677-4755-a719-4ac7cd05fb8d": assets["robbi"],
+    "id-05bd589b-f127-475c-a124-fcc120308ed8": assets["logo"],
+    "id-6277878f-c394-43c4-bbce-b235302dcc33": assets["logo"],
+    "id-36c620b4-1f7c-41ba-a527-e9011d07fdef": assets["logo"],
+    "id-11a26d61-e275-4426-b4f8-13089f0e004e": assets["logo"],
+    "id-a2c4def4-2dec-4ce4-b77b-8cb36411f3c1": assets["logo"],
+    "id-1752f363-521c-4e85-a715-a0d83bd943d0": assets["logo"],
+    "id-213479a4-2537-4b55-a57e-c65747849606": assets["logo"],
+    "id-c48de107-77f3-4fa6-ab93-c864b6bd2d8d": assets["logo"],
+    "id-6a5c47e5-5b6d-46ef-84e1-d4a2d9e75201": assets["logo"],
+    "id-e102e169-1ac7-442f-bbfa-fda506f1824a": assets["logo"]
+};
+<!-- End of Assets -->
+
+            convertURLs(assetInstances, "smart-path");
+        </script>
+        <script>
+            <!-- Characters -->
+var characters =
+{};
+<!-- End of Characters -->
+
+        </script>
+    </body>
+</html>
